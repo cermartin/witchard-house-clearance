@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Witchard House Clearance | Hampshire House Clearance Specialists</title>
   <meta name="description" content="Family-run house clearance specialists in Alresford, Hampshire. Full property clearances, post-clearance cleaning, licensed waste carriers, CRB checked. Fully insured. Free quote.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a2d5a'/><text y='.9em' font-size='80' x='10'>🏠</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -305,7 +305,8 @@
     .contact-meta-item svg { color: var(--primary); }
     @media (max-width: 640px) {
       .contact-cta-grid { grid-template-columns: 1fr; }
-      .contact-cta-value { font-size: 1rem; word-break: break-all; }
+      .contact-cta-value { font-size: .9rem; word-break: break-all; overflow-wrap: anywhere; }
+      .contact-cta-hint { font-size: .78rem; }
     }
     .mailto-builder {
       background: #fff; border-radius: 16px; padding: 1.75rem 2rem;
@@ -404,6 +405,30 @@
       .footer-bottom { flex-direction: column; text-align: center; }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Witchard House Clearance",
+  "description": "Family-run house clearance specialists in New Alresford, Hampshire. Full property clearances, probate clearances, post-clearance cleaning. Licensed waste carriers, CRB checked, fully insured.",
+  "url": "https://witchard.vercel.app",
+  "telephone": "+447706559151",
+  "email": "witchardhomeclearances@yahoo.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "New Alresford",
+    "addressRegion": "Hampshire",
+    "addressCountry": "GB"
+  },
+  "areaServed": ["New Alresford","Winchester","Eastleigh","Basingstoke","Alton","Petersfield","Southampton","Fareham","Romsey","Andover","Hampshire"],
+  "openingHours": "Mo-Sa 08:00-18:00",
+  "priceRange": "££",
+  "sameAs": [
+    "https://www.facebook.com/Witchardhomeclearances",
+    "https://www.instagram.com/Witchardhomeclearances"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -541,7 +566,7 @@
       </div>
       <div class="service-card">
         <div class="service-card-img">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75" alt="Garden & Garage Clearance" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=75" alt="Garden & Garage Clearance" loading="lazy">
         </div>
         <div class="service-card-body">
           <h3>Garden &amp; Garage Clearance</h3>
@@ -567,7 +592,7 @@
       <div class="step-card">
         <div class="step-num">2</div>
         <h3>Property Assessment</h3>
-        <p>We'll visit the property at a time that suits you, assess the volume of items, and confirm a fixed price. No hidden costs, no nasty surprises on the day.</p>
+        <p>We'll visit at a time that suits you, assess the volume of items, and confirm a fixed price. No hidden costs, no nasty surprises. You don't need to be on site — we can work around your schedule.</p>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
@@ -679,6 +704,7 @@
     <span class="section-label">Get in Touch</span>
     <h2 class="section-title">Free Quote &amp; Enquiries</h2>
     <p class="section-sub">Give us a call or drop us an email — we aim to get back to you within a few hours.</p>
+    <p style="font-size:.92rem;color:#666;margin-bottom:1.5rem;padding:.85rem 1.1rem;background:#fff;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;">Every job is priced individually — a single-room clearance typically starts from a few hundred pounds; full house clearances depend on volume and access. All quotes are free and there is no obligation.</p>
     <div class="contact-cta-grid">
       <a href="tel:+447706559151" class="contact-cta-card contact-cta-call">
         <div class="contact-cta-icon">
@@ -737,6 +763,10 @@
       <div class="contact-meta-item">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:18px;height:18px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         Licensed Waste Carrier · CRB Checked · Fully Insured
+      </div>
+      <div class="contact-meta-item" id="eaLicence" style="display:none">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:18px;height:18px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6-4a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        EA Reg: <span id="eaNumber"></span>
       </div>
       <div class="contact-meta-item">
         <svg viewBox="0 0 24 24" style="width:18px;height:18px;flex-shrink:0;fill:currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
