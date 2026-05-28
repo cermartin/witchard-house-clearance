@@ -155,15 +155,27 @@
     .sticky-cta {
       display: none;
       position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
-      background: var(--primary); padding: .85rem 1.25rem;
+      background: var(--primary); padding: .75rem 1rem;
       box-shadow: 0 -4px 20px rgba(0,0,0,.18);
     }
-    .sticky-cta a {
-      display: block; text-align: center;
-      background: var(--accent); color: #fff;
-      border-radius: 999px; padding: .8rem; font-weight: 700; font-size: 1rem;
+    .sticky-cta-row {
+      display: flex; gap: .6rem; align-items: stretch;
     }
-    @media (max-width: 768px) { .sticky-cta { display: block; } }
+    .sticky-cta-quote {
+      flex: 1; text-align: center;
+      background: var(--accent); color: #fff;
+      border-radius: 999px; padding: .75rem .5rem; font-weight: 700; font-size: .95rem;
+    }
+    .sticky-cta-call {
+      display: flex; align-items: center; justify-content: center; gap: .3rem;
+      background: rgba(255,255,255,.15); color: #fff; border: 1.5px solid rgba(255,255,255,.4);
+      border-radius: 999px; padding: .75rem 1rem; font-weight: 600; font-size: .9rem;
+      white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+      .sticky-cta { display: block; }
+      body { padding-bottom: 74px; }
+    }
 
     /* ── SECTION BASE ── */
     section { padding: 90px 5%; }
@@ -372,7 +384,8 @@
       .nav-links.open { display: flex; }
       .nav-mobile-btn { display: block; }
       .hero { padding: 100px 5% 60px; }
-      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .hero-btns { flex-direction: column; align-items: center; }
+      .hero-btns .btn { width: 100%; max-width: 280px; justify-content: center; }
       .contact-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
@@ -429,7 +442,10 @@
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta">
-  <a href="#" onclick="openQuote(); return false;">Get a Free Quote →</a>
+  <div class="sticky-cta-row">
+    <a href="#" class="sticky-cta-quote" onclick="openQuote(); return false;">Get a Free Quote →</a>
+    <a href="tel:+447706559151" class="sticky-cta-call">📞 Call</a>
+  </div>
 </div>
 
 <!-- TRUST BAR -->
