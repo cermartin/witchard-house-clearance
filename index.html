@@ -80,42 +80,90 @@
     }
     .nav-mobile-btn svg { width: 26px; height: 26px; }
 
-    /* ── HERO ── */
+    /* ── HERO SPLASH ── */
+    @keyframes logoEntrance {
+      from { opacity: 0; transform: scale(.88) translateY(18px); }
+      to   { opacity: 1; transform: scale(1)  translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes chevronBob {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(7px); }
+    }
+
     .hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, rgba(26,45,90,.75) 0%, rgba(26,45,90,.45) 100%),
-                  url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;
-      display: flex; align-items: center;
-      padding: 120px 5% 80px;
+      background: #fff;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 90px 5% 80px;
+      position: relative;
+      text-align: center;
     }
-    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: .4rem;
-      background: var(--accent); color: #fff;
-      padding: .4rem 1rem; border-radius: 999px;
-      font-size: .8rem; font-weight: 600; letter-spacing: .04em;
-      margin-bottom: 1.5rem; text-transform: uppercase;
+    .hero-logo-wrap {
+      animation: logoEntrance .75s cubic-bezier(.22,1,.36,1) both;
+      margin-bottom: 2rem;
     }
-    .hero-title {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 700; color: #fff; line-height: 1.15;
-      max-width: 700px; margin-bottom: 1.2rem;
+    .hero-logo-wrap img {
+      width: min(520px, 82vw);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 8px 32px rgba(26,45,90,.13));
     }
-    .hero-sub {
-      font-size: 1.15rem; color: rgba(255,255,255,.88);
-      max-width: 520px; margin-bottom: 2rem; line-height: 1.7;
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--primary); font-weight: 300; letter-spacing: .04em;
+      opacity: 0;
+      animation: fadeUp .55s cubic-bezier(.22,1,.36,1) .45s forwards;
+      margin-bottom: 2rem;
     }
-    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .hero-badges {
-      display: flex; flex-wrap: wrap; gap: .75rem;
+    .hero-btns {
+      display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+      opacity: 0;
+      animation: fadeUp .55s cubic-bezier(.22,1,.36,1) .6s forwards;
+      margin-bottom: 2.5rem;
+    }
+    .hero-chips {
+      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+      opacity: 0;
+      animation: fadeUp .55s cubic-bezier(.22,1,.36,1) .75s forwards;
     }
     .hero-chip {
       display: flex; align-items: center; gap: .35rem;
-      background: rgba(255,255,255,.15); backdrop-filter: blur(4px);
-      color: #fff; padding: .4rem .9rem; border-radius: 999px;
-      font-size: .82rem; font-weight: 500; border: 1px solid rgba(255,255,255,.25);
+      background: var(--surface); color: var(--primary);
+      padding: .38rem .9rem; border-radius: 999px;
+      font-size: .8rem; font-weight: 500; border: 1px solid rgba(26,45,90,.12);
     }
     .hero-chip::before { content: "✓"; color: var(--accent); font-weight: 700; }
+    .hero-scroll-cue {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: .3rem;
+      opacity: 0; animation: fadeUp .4s ease .95s forwards;
+      color: #aaa; font-size: .72rem; text-transform: uppercase; letter-spacing: .1em;
+      cursor: pointer;
+    }
+    .hero-scroll-cue svg {
+      width: 22px; height: 22px; stroke: var(--accent);
+      animation: chevronBob 1.5s ease-in-out infinite;
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+      background: var(--primary); padding: .85rem 1.25rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,.18);
+    }
+    .sticky-cta a {
+      display: block; text-align: center;
+      background: var(--accent); color: #fff;
+      border-radius: 999px; padding: .8rem; font-weight: 700; font-size: 1rem;
+    }
+    @media (max-width: 768px) { .sticky-cta { display: block; } }
 
     /* ── SECTION BASE ── */
     section { padding: 90px 5%; }
@@ -354,25 +402,35 @@
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SPLASH -->
 <section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-badge">⭐ Family-Run · Fully Insured · Hampshire</div>
-    <h1 class="hero-title">Hampshire's Trusted House Clearance Specialists</h1>
-    <p class="hero-sub">From single rooms to full property clearances — we handle everything with care, efficiency, and a personal touch. Leave the fuss to us.</p>
-    <div class="hero-btns">
-      <a href="#" class="btn btn-primary" onclick="openQuote(); return false;">Get a Free Quote</a>
-      <a href="tel:+441962000000" class="btn btn-outline">📞 Call Us Now</a>
-    </div>
-    <div class="hero-badges">
-      <span class="hero-chip">Licensed Waste Carriers</span>
-      <span class="hero-chip">CRB Checked</span>
-      <span class="hero-chip">Fully Insured</span>
-      <span class="hero-chip">Post-Clearance Cleaning</span>
-      <span class="hero-chip">Free No-Obligation Quote</span>
-    </div>
+  <div class="hero-logo-wrap">
+    <img src="Snapchat-1699406977.jpg" alt="Witchard House Clearance — Family-Run Hampshire">
+  </div>
+  <p class="hero-tagline">Hampshire's trusted, family-run house clearance specialists</p>
+  <div class="hero-btns">
+    <a href="#" class="btn btn-primary" onclick="openQuote(); return false;">Get a Free Quote</a>
+    <a href="tel:+441962000000" class="btn btn-outline" style="background:var(--primary);border-color:var(--primary);color:#fff;">📞 Call Us Now</a>
+  </div>
+  <div class="hero-chips">
+    <span class="hero-chip">Licensed Waste Carriers</span>
+    <span class="hero-chip">CRB Checked</span>
+    <span class="hero-chip">Fully Insured</span>
+    <span class="hero-chip">Post-Clearance Cleaning</span>
+    <span class="hero-chip">Free No-Obligation Quote</span>
+  </div>
+  <div class="hero-scroll-cue" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+    scroll
+    <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
   </div>
 </section>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="#" onclick="openQuote(); return false;">Get a Free Quote →</a>
+</div>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
