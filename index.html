@@ -307,6 +307,32 @@
       .contact-cta-grid { grid-template-columns: 1fr; }
       .contact-cta-value { font-size: 1rem; word-break: break-all; }
     }
+    .mailto-builder {
+      background: #fff; border-radius: 16px; padding: 1.75rem 2rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,.07); margin-bottom: 1.5rem;
+    }
+    .mailto-title {
+      font-size: .95rem; font-weight: 600; color: var(--primary);
+      margin-bottom: 1.2rem;
+    }
+    .mailto-fields {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;
+    }
+    .mailto-group label {
+      display: block; font-size: .82rem; font-weight: 600; color: #555; margin-bottom: .3rem;
+    }
+    .mailto-group input,
+    .mailto-group select {
+      width: 100%; padding: .65rem .9rem; border: 1.5px solid #ddd; border-radius: 8px;
+      font-family: var(--font-sans); font-size: .9rem; color: #222;
+      background: #fafafa; transition: border-color .2s;
+    }
+    .mailto-group input:focus,
+    .mailto-group select:focus { outline: none; border-color: var(--accent); background: #fff; }
+    .mailto-btn { padding: .7rem 1.75rem; }
+    @media (max-width: 640px) {
+      .mailto-fields { grid-template-columns: 1fr; }
+    }
 
     /* ── TRUST BAR ── */
     .trust-bar {
@@ -673,6 +699,34 @@
         </div>
       </a>
     </div>
+    <div class="mailto-builder">
+      <h3 class="mailto-title">Prefer to write? Fill this in and we'll open your email app ready to send.</h3>
+      <div class="mailto-fields">
+        <div class="mailto-group">
+          <label for="mlName">Your Name</label>
+          <input type="text" id="mlName" placeholder="Jane Smith">
+        </div>
+        <div class="mailto-group">
+          <label for="mlPostcode">Postcode</label>
+          <input type="text" id="mlPostcode" placeholder="SO24 9AA">
+        </div>
+        <div class="mailto-group">
+          <label for="mlBedrooms">Bedrooms / Job Type</label>
+          <select id="mlBedrooms">
+            <option value="">Select...</option>
+            <option>Studio / 1 bed</option>
+            <option>2 bedrooms</option>
+            <option>3 bedrooms</option>
+            <option>4 bedrooms</option>
+            <option>5+ bedrooms</option>
+            <option>Single item removal</option>
+            <option>Commercial / other</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary mailto-btn" onclick="buildMailto()">Open Email App →</button>
+    </div>
+
     <div class="contact-meta">
       <div class="contact-meta-item">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:18px;height:18px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -745,6 +799,31 @@
 </footer>
 
 <script>
+  function buildMailto() {
+    const name     = document.getElementById('mlName').value.trim();
+    const postcode = document.getElementById('mlPostcode').value.trim();
+    const bedrooms = document.getElementById('mlBedrooms').value;
+
+    const subject = 'House Clearance Enquiry' + (postcode ? ' — ' + postcode : '');
+    const body = [
+      'Hi Witchard,',
+      '',
+      'I would like to get a free quote for a house clearance.',
+      '',
+      'Name: ' + (name || '[your name]'),
+      'Postcode: ' + (postcode || '[your postcode]'),
+      'Job type: ' + (bedrooms || '[please specify]'),
+      '',
+      'Please get back to me at your earliest convenience.',
+      '',
+      'Many thanks,'
+    ].join('\n');
+
+    window.location.href = 'mailto:witchardhomeclearances@yahoo.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+  }
+
   function toggleNav() {
     const links = document.getElementById('navLinks');
     const isOpen = links.classList.toggle('open');
