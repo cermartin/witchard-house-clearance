@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Witchard House Clearance | Hampshire House Clearance Specialists</title>
+  <meta name="description" content="Family-run house clearance specialists in Alresford, Hampshire. Full property clearances, post-clearance cleaning, licensed waste carriers, CRB checked. Fully insured. Free quote.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1a2d5a;
+      --accent:  #e8a020;
+      --surface: #f8f6f0;
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: #222; line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .75rem 1.75rem; border-radius: 999px;
+      font-weight: 600; font-size: .95rem; border: 2px solid transparent;
+      cursor: pointer; transition: all .2s; text-decoration: none;
+    }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-primary:hover { background: #c98a12; border-color: #c98a12; transform: translateY(-1px); }
+    .btn-outline { background: rgba(255,255,255,.12); color: #fff; border-color: rgba(255,255,255,.6); }
+    .btn-outline:hover { background: rgba(255,255,255,.22); }
+    .btn-white { background: #fff; color: var(--primary); border-color: #fff; }
+    .btn-white:hover { background: #f0f0f0; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,.97); backdrop-filter: blur(8px);
+      box-shadow: 0 2px 16px rgba(0,0,0,.08);
+      padding: 0 5%;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: .6rem; }
+    .nav-logo-img { height: 48px; width: auto; }
+    .nav-logo-fallback {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem; flex-shrink: 0;
+    }
+    .nav-brand { font-weight: 700; font-size: 1.1rem; color: var(--primary); line-height: 1.2; }
+    .nav-brand span { display: block; font-weight: 400; font-size: .75rem; color: var(--accent); text-transform: uppercase; letter-spacing: .05em; }
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a { font-size: .9rem; font-weight: 500; color: #444; transition: color .2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary); color: #fff; padding: .55rem 1.3rem;
+      border-radius: 999px; font-weight: 600; font-size: .9rem;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--accent); color: #fff; }
+    .nav-mobile-btn {
+      display: none; background: none; border: none;
+      cursor: pointer; padding: .4rem; color: var(--primary);
+    }
+    .nav-mobile-btn svg { width: 26px; height: 26px; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(26,45,90,.75) 0%, rgba(26,45,90,.45) 100%),
+                  url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center;
+      padding: 120px 5% 80px;
+    }
+    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: var(--accent); color: #fff;
+      padding: .4rem 1rem; border-radius: 999px;
+      font-size: .8rem; font-weight: 600; letter-spacing: .04em;
+      margin-bottom: 1.5rem; text-transform: uppercase;
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700; color: #fff; line-height: 1.15;
+      max-width: 700px; margin-bottom: 1.2rem;
+    }
+    .hero-sub {
+      font-size: 1.15rem; color: rgba(255,255,255,.88);
+      max-width: 520px; margin-bottom: 2rem; line-height: 1.7;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: .75rem;
+    }
+    .hero-chip {
+      display: flex; align-items: center; gap: .35rem;
+      background: rgba(255,255,255,.15); backdrop-filter: blur(4px);
+      color: #fff; padding: .4rem .9rem; border-radius: 999px;
+      font-size: .82rem; font-weight: 500; border: 1px solid rgba(255,255,255,.25);
+    }
+    .hero-chip::before { content: "✓"; color: var(--accent); font-weight: 700; }
+
+    /* ── SECTION BASE ── */
+    section { padding: 90px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: inline-block; font-size: .78rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em; color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700;
+      color: var(--primary); margin-bottom: .75rem; line-height: 1.2;
+    }
+    .section-sub {
+      font-size: 1.05rem; color: #555; max-width: 600px; margin-bottom: 3rem;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--surface); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+    .service-card {
+      background: #fff; border-radius: 14px; overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,.07); transition: transform .2s, box-shadow .2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,.12); }
+    .service-card-img { height: 200px; overflow: hidden; }
+    .service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+    .service-card:hover .service-card-img img { transform: scale(1.04); }
+    .service-card-body { padding: 1.4rem; }
+    .service-card-body h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: .5rem; }
+    .service-card-body p { font-size: .92rem; color: #555; line-height: 1.6; }
+
+    /* ── STEPS ── */
+    #how-it-works { background: #fff; }
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .step-card { text-align: center; padding: 1rem; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; font-weight: 700; margin: 0 auto 1.1rem;
+    }
+    .step-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: .5rem; }
+    .step-card p { font-size: .92rem; color: #555; }
+
+    /* ── REVIEWS ── */
+    #reviews { background: var(--surface); }
+    .reviews-header { text-align: center; margin-bottom: 2.5rem; }
+    .reviews-score { font-size: 3.5rem; font-weight: 800; color: var(--primary); line-height: 1; }
+    .reviews-stars { color: var(--accent); font-size: 1.6rem; margin: .4rem 0; }
+    .reviews-platform { font-size: .9rem; color: #666; font-weight: 500; }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .review-card {
+      background: #fff; border-radius: 12px; padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+    .review-stars { color: var(--accent); font-size: 1rem; margin-bottom: .75rem; }
+    .review-text { font-style: italic; color: #444; font-size: .93rem; line-height: 1.7; margin-bottom: 1rem; }
+    .review-author { font-weight: 600; font-size: .88rem; color: var(--primary); }
+    .review-verified { font-size: .78rem; color: #888; margin-top: .2rem; }
+
+    /* ── AREAS ── */
+    #areas { background: #fff; }
+    .areas-chips { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .area-chip {
+      background: #fff; border: 1.5px solid #ddd; color: #444;
+      padding: .45rem 1.1rem; border-radius: 999px; font-size: .88rem;
+      font-weight: 500; transition: all .2s;
+    }
+    .area-chip:hover { border-color: var(--accent); color: var(--primary); }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--surface); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; align-items: start;
+    }
+    .contact-info h3 { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 1.2rem; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: .75rem;
+      margin-bottom: 1.1rem; font-size: .95rem; color: #444;
+    }
+    .contact-icon {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--primary); color: #fff; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1rem;
+    }
+    .contact-item a { color: var(--primary); font-weight: 600; }
+    .contact-item a:hover { color: var(--accent); }
+    .social-links { display: flex; gap: .75rem; margin-top: 1.5rem; }
+    .social-link {
+      display: flex; align-items: center; gap: .4rem;
+      background: var(--primary); color: #fff;
+      padding: .55rem 1.1rem; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      transition: background .2s;
+    }
+    .social-link:hover { background: var(--accent); }
+    .contact-form-box {
+      background: #fff; border-radius: 16px; padding: 2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+    }
+    .contact-form-box h3 { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: .85rem; font-weight: 600; color: #444; margin-bottom: .35rem; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%; padding: .7rem 1rem; border: 1.5px solid #ddd; border-radius: 8px;
+      font-family: var(--font-sans); font-size: .93rem; color: #222;
+      transition: border-color .2s; background: #fafafa;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { outline: none; border-color: var(--accent); background: #fff; }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-honeypot { display: none !important; }
+    .form-submit { width: 100%; padding: .85rem; font-size: 1rem; font-weight: 700; border: none; }
+    .form-success {
+      display: none; background: #e6f9ee; border: 1.5px solid #4caf50;
+      border-radius: 10px; padding: 1.2rem; text-align: center;
+      color: #2e7d32; font-weight: 600; margin-top: 1rem;
+    }
+    .form-error {
+      display: none; background: #fdecea; border: 1.5px solid #ef5350;
+      border-radius: 10px; padding: 1rem; text-align: center;
+      color: #c62828; font-size: .9rem; margin-top: .75rem;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--primary); padding: 28px 5%;
+    }
+    .trust-bar-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: .6rem;
+      color: #fff; font-size: .9rem; font-weight: 500;
+    }
+    .trust-item-icon { color: var(--accent); font-size: 1.3rem; }
+
+    /* ── FOOTER ── */
+    footer { background: #111; color: #bbb; padding: 60px 5% 30px; }
+    .footer-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem;
+      padding-bottom: 40px; border-bottom: 1px solid #333;
+    }
+    .footer-brand p { font-size: .9rem; margin-top: .75rem; line-height: 1.7; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .95rem; font-weight: 600; margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: .5rem; }
+    .footer-col ul li a { font-size: .88rem; color: #999; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 24px; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .83rem; color: #666; }
+    .footer-social { display: flex; gap: .75rem; }
+    .footer-social a {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: #222; color: #bbb;
+      display: flex; align-items: center; justify-content: center; font-size: .85rem;
+      transition: background .2s, color .2s;
+    }
+    .footer-social a:hover { background: var(--accent); color: #fff; }
+
+    /* ── MODAL ── */
+    .modal-backdrop {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,.55); backdrop-filter: blur(3px);
+      align-items: center; justify-content: center; padding: 1rem;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      background: #fff; border-radius: 18px; padding: 2.2rem;
+      width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25); position: relative;
+    }
+    .modal-close {
+      position: absolute; top: 1rem; right: 1rem;
+      background: #f0f0f0; border: none; border-radius: 50%;
+      width: 34px; height: 34px; cursor: pointer;
+      font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+      transition: background .2s;
+    }
+    .modal-close:hover { background: #e0e0e0; }
+    .modal h2 { font-size: 1.4rem; font-weight: 700; color: var(--primary); margin-bottom: .4rem; }
+    .modal p.modal-sub { font-size: .92rem; color: #666; margin-bottom: 1.5rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: #fff; padding: 1rem 5%; box-shadow: 0 8px 20px rgba(0,0,0,.1); gap: 1rem; }
+      .nav-links.open { display: flex; }
+      .nav-mobile-btn { display: block; }
+      .hero { padding: 100px 5% 60px; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="Snapchat-1699406977.jpg" alt="Witchard House Clearance" class="nav-logo-img">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta" onclick="openQuote()">Free Quote</a></li>
+    </ul>
+    <button class="nav-mobile-btn" onclick="toggleNav()" aria-label="Menu">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-badge">⭐ Family-Run · Fully Insured · Hampshire</div>
+    <h1 class="hero-title">Hampshire's Trusted House Clearance Specialists</h1>
+    <p class="hero-sub">From single rooms to full property clearances — we handle everything with care, efficiency, and a personal touch. Leave the fuss to us.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn btn-primary" onclick="openQuote(); return false;">Get a Free Quote</a>
+      <a href="tel:+441962000000" class="btn btn-outline">📞 Call Us Now</a>
+    </div>
+    <div class="hero-badges">
+      <span class="hero-chip">Licensed Waste Carriers</span>
+      <span class="hero-chip">CRB Checked</span>
+      <span class="hero-chip">Fully Insured</span>
+      <span class="hero-chip">Post-Clearance Cleaning</span>
+      <span class="hero-chip">Free No-Obligation Quote</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="trust-item-icon">🏠</span> Full &amp; Partial Property Clearances</div>
+    <div class="trust-item"><span class="trust-item-icon">♻️</span> Responsible Waste Disposal</div>
+    <div class="trust-item"><span class="trust-item-icon">🔒</span> Licensed &amp; CRB Checked</div>
+    <div class="trust-item"><span class="trust-item-icon">✅</span> Liability Insurance</div>
+    <div class="trust-item"><span class="trust-item-icon">👨‍👩‍👦</span> Family-Run Since Day One</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">We cover every aspect of house clearance — quickly, cleanly, and with full compliance.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=75" alt="Full House Clearance" loading="lazy">
+        </div>
+        <div class="service-card-body">
+          <h3>Full House Clearance</h3>
+          <p>Complete end-to-end clearance of any property — from studio flats to large family homes. We remove furniture, appliances, clothing, and general waste efficiently and responsibly.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=75" alt="Partial Clearance" loading="lazy">
+        </div>
+        <div class="service-card-body">
+          <h3>Partial Clearance</h3>
+          <p>Only need specific rooms or items cleared? We offer flexible partial clearances tailored to your exact needs — no unnecessary charges for work you don't need.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=75" alt="Post-Clearance Cleaning" loading="lazy">
+        </div>
+        <div class="service-card-body">
+          <h3>Post-Clearance Cleaning</h3>
+          <p>Once cleared, we can leave the property spotless. Our post-clearance clean covers all rooms and surfaces — please note oven cleaning is not included in this service.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=75" alt="Probate & Estate Clearance" loading="lazy">
+        </div>
+        <div class="service-card-body">
+          <h3>Probate &amp; Estate Clearance</h3>
+          <p>We understand the sensitivity required when clearing a loved one's home. Our team handles every item with respect and discretion throughout the entire process.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=75" alt="Landlord & Rental Clearance" loading="lazy">
+        </div>
+        <div class="service-card-body">
+          <h3>Landlord &amp; Rental Clearance</h3>
+          <p>Tenants left belongings behind? We'll clear the property swiftly so you can get back to letting. Fast turnaround with responsible disposal of all items.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1595514535215-9f3f8e959290?w=600&q=75" alt="Garden & Garage Clearance" loading="lazy">
+        </div>
+        <div class="service-card-body">
+          <h3>Garden &amp; Garage Clearance</h3>
+          <p>Sheds, garages, outbuildings, and gardens piled up with years of items — we clear the lot. All waste is sorted, recycled, or donated where possible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="section-inner">
+    <span class="section-label">Simple Process</span>
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-sub">Three straightforward steps from enquiry to a cleared, clean property.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Get in Touch</h3>
+        <p>Fill in our free quote form or give us a ring. Tell us the number of bedrooms and the type of clearance you need — we'll get back to you promptly with a no-obligation estimate.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Property Assessment</h3>
+        <p>We'll visit the property at a time that suits you, assess the volume of items, and confirm a fixed price. No hidden costs, no nasty surprises on the day.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>We Clear &amp; Clean</h3>
+        <p>Our team arrives on the agreed date and gets the job done efficiently. We handle all disposal, recycling, and donating — and can clean up after if required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="reviews-header">
+      <div class="reviews-score">5.0/5</div>
+      <div class="reviews-stars">★★★★★</div>
+      <div class="reviews-platform">Google Reviews · Family-run · Hampshire</div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Absolutely brilliant service from start to finish. They were prompt, professional, and took such care with Mum's belongings. Would highly recommend to anyone needing a house clearance in Hampshire."</p>
+        <div class="review-author">Sarah T.</div>
+        <div class="review-verified">Verified Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Used Witchard for a full clearance of my late father's home. They were sensitive, thorough, and left the place spotless. The price was fair and there were no surprise charges. Couldn't ask for more."</p>
+        <div class="review-author">James H.</div>
+        <div class="review-verified">Verified Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Fast, reliable, and friendly. Cleared out a three-bedroom house in one day. Everything was sorted — recycled, donated, or disposed of properly. Great family team who really care about the job."</p>
+        <div class="review-author">Linda M.</div>
+        <div class="review-verified">Verified Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section id="areas">
+  <div class="section-inner">
+    <span class="section-label">Where We Work</span>
+    <h2 class="section-title">Areas We Cover</h2>
+    <p class="section-sub">Based in Alresford, we serve New Alresford and all surrounding areas across Hampshire.</p>
+    <div class="areas-chips">
+      <span class="area-chip">New Alresford</span>
+      <span class="area-chip">Old Alresford</span>
+      <span class="area-chip">Winchester</span>
+      <span class="area-chip">Eastleigh</span>
+      <span class="area-chip">Basingstoke</span>
+      <span class="area-chip">Alton</span>
+      <span class="area-chip">Petersfield</span>
+      <span class="area-chip">Southampton</span>
+      <span class="area-chip">Fareham</span>
+      <span class="area-chip">Romsey</span>
+      <span class="area-chip">Chandler's Ford</span>
+      <span class="area-chip">Bishop's Waltham</span>
+      <span class="area-chip">Hedge End</span>
+      <span class="area-chip">Whitchurch</span>
+      <span class="area-chip">Andover</span>
+      <span class="area-chip">Stockbridge</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <span class="section-label">Get in Touch</span>
+    <h2 class="section-title">Free Quote &amp; Enquiries</h2>
+    <p class="section-sub">Get in touch for a free, no-obligation estimate. We aim to respond within a few hours.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><strong>Phone</strong><br><a href="tel:+441962000000">01962 000 000</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div><strong>Email</strong><br><a href="mailto:info@witchard.co.uk">info@witchard.co.uk</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><strong>Based in</strong><br>New Alresford, Hampshire</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div><strong>Hours</strong><br>Mon–Sat: 8am–6pm</div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" id="fbLink">f Facebook</a>
+          <a href="#" class="social-link" id="igLink">📸 Instagram</a>
+        </div>
+        <div style="margin-top:1.5rem; padding:1rem; background:#fff; border-radius:10px; font-size:.85rem; color:#555; border-left: 3px solid var(--accent);">
+          <strong style="color:var(--primary);">Fully Licensed &amp; Insured</strong><br>
+          Licensed Waste Carrier · CRB Checked · Public Liability Insurance ✅
+        </div>
+      </div>
+      <div class="contact-form-box">
+        <h3>Request a Free Quote</h3>
+        <form id="contactForm" onsubmit="handleSubmit(event, 'contactForm')">
+          <input type="text" name="website" class="form-honeypot" autocomplete="off" tabindex="-1">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cName">Your Name *</label>
+              <input type="text" id="cName" name="name" required placeholder="Jane Smith">
+            </div>
+            <div class="form-group">
+              <label for="cPhone">Phone *</label>
+              <input type="tel" id="cPhone" name="phone" required placeholder="07700 000000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Email</label>
+            <input type="email" id="cEmail" name="email" placeholder="jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="cBedrooms">Number of Bedrooms *</label>
+            <select id="cBedrooms" name="bedrooms" required>
+              <option value="">Select...</option>
+              <option>Studio / 1 bed</option>
+              <option>2 bedrooms</option>
+              <option>3 bedrooms</option>
+              <option>4 bedrooms</option>
+              <option>5+ bedrooms</option>
+              <option>Commercial / other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cMessage">Additional Details</label>
+            <textarea id="cMessage" name="message" placeholder="Tell us more about the clearance — location, access, any particular items, timing..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Get My Free Quote →</button>
+          <div class="form-success" id="contactSuccess">
+            ✅ Thank you! We'll be in touch within a few hours with your free quote.
+          </div>
+          <div class="form-error" id="contactError">
+            Something went wrong. Please call us directly or email info@witchard.co.uk
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="Snapchat-1699406977.jpg" alt="Witchard House Clearance" style="height:50px; width:auto; filter:brightness(0) invert(1); opacity:.85;">
+      <p>Family-run house clearance specialists serving New Alresford and all of Hampshire. Licensed, insured, and trusted to leave the fuss to us.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Full House Clearance</a></li>
+        <li><a href="#services">Partial Clearance</a></li>
+        <li><a href="#services">Post-Clearance Cleaning</a></li>
+        <li><a href="#services">Probate &amp; Estate</a></li>
+        <li><a href="#services">Landlord Clearance</a></li>
+        <li><a href="#services">Garden &amp; Garage</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#areas">Areas We Cover</a></li>
+        <li><a href="#contact">Free Quote</a></li>
+        <li><a href="mailto:info@witchard.co.uk">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Witchard House Clearance. All rights reserved. Licensed Waste Carrier · Hampshire.</p>
+    <div class="footer-social">
+      <a href="#" id="footerFb" title="Facebook">f</a>
+      <a href="#" id="footerIg" title="Instagram">📷</a>
+    </div>
+  </div>
+</footer>
+
+<!-- QUOTE MODAL -->
+<div class="modal-backdrop" id="quoteModal" onclick="closeQuoteOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeQuote()">✕</button>
+    <h2>Get a Free Quote</h2>
+    <p class="modal-sub">Tell us about your property and we'll get back to you with a no-obligation estimate.</p>
+    <form id="modalForm" onsubmit="handleSubmit(event, 'modalForm')">
+      <input type="text" name="website" class="form-honeypot" autocomplete="off" tabindex="-1">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="mName">Your Name *</label>
+          <input type="text" id="mName" name="name" required placeholder="Jane Smith">
+        </div>
+        <div class="form-group">
+          <label for="mPhone">Phone *</label>
+          <input type="tel" id="mPhone" name="phone" required placeholder="07700 000000">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mEmail">Email</label>
+        <input type="email" id="mEmail" name="email" placeholder="jane@example.com">
+      </div>
+      <div class="form-group">
+        <label for="mBedrooms">Number of Bedrooms *</label>
+        <select id="mBedrooms" name="bedrooms" required>
+          <option value="">Select...</option>
+          <option>Studio / 1 bed</option>
+          <option>2 bedrooms</option>
+          <option>3 bedrooms</option>
+          <option>4 bedrooms</option>
+          <option>5+ bedrooms</option>
+          <option>Commercial / other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mMessage">Additional Details</label>
+        <textarea id="mMessage" name="message" placeholder="Location, access notes, particular items, preferred dates..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Request Free Quote →</button>
+      <div class="form-success" id="modalSuccess">
+        ✅ Thank you! We'll be in touch within a few hours with your free quote.
+      </div>
+      <div class="form-error" id="modalError">
+        Something went wrong. Please call us directly.
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  const SUPABASE_URL = 'https://yocescevaflqzemdpesv.supabase.co';
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvY2VzY2V2YWZscXplbWRwZXN2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDAwMDAwMDAsImV4cCI6MjAwMDAwMDAwMH0.placeholder';
+  const COMPANY_SLUG = 'witchard-house-clearance';
+  const COMPANY_NAME = 'Witchard House Clearance';
+
+  async function saveEnquiry(data) {
+    const res = await fetch(SUPABASE_URL + '/rest/v1/enquiries', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        company_slug: COMPANY_SLUG,
+        company_name: COMPANY_NAME,
+        name: data.name,
+        email: data.email || '',
+        phone: data.phone,
+        message: (data.bedrooms ? 'Bedrooms: ' + data.bedrooms + '\n' : '') + (data.message || '')
+      })
+    });
+    if (!res.ok) throw new Error('Failed');
+  }
+
+  async function handleSubmit(e, formId) {
+    e.preventDefault();
+    const form = document.getElementById(formId);
+    const honeypot = form.querySelector('[name="website"]');
+    if (honeypot && honeypot.value) return;
+
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const data = {
+      name: form.querySelector('[name="name"]').value,
+      phone: form.querySelector('[name="phone"]').value,
+      email: form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value : '',
+      bedrooms: form.querySelector('[name="bedrooms"]') ? form.querySelector('[name="bedrooms"]').value : '',
+      message: form.querySelector('[name="message"]') ? form.querySelector('[name="message"]').value : ''
+    };
+
+    const successId = formId === 'contactForm' ? 'contactSuccess' : 'modalSuccess';
+    const errorId   = formId === 'contactForm' ? 'contactError'   : 'modalError';
+
+    try {
+      await saveEnquiry(data);
+      form.style.display = 'none';
+      document.getElementById(successId).style.display = 'block';
+    } catch {
+      document.getElementById(errorId).style.display = 'block';
+      btn.textContent = 'Request Free Quote →';
+      btn.disabled = false;
+    }
+  }
+
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  function openQuote() {
+    document.getElementById('quoteModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeQuote() {
+    document.getElementById('quoteModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeQuoteOutside(e) {
+    if (e.target === document.getElementById('quoteModal')) closeQuote();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeQuote(); });
+</script>
+</body>
+</html>
