@@ -9,8 +9,8 @@
 - [x] Add `hasOfferCatalog` to schema
 
 ## Needs Joe / Martin
-- [ ] Connect domain (`witchards.co.uk`) on Spaceship → Vercel
-- [ ] Set up Google Business Profile
+- [x] Connect domain (`witchards.co.uk`) on Spaceship → Vercel
+- [x] Set up Google Business Profile (needs verification)
 - [ ] Add owner name(s) to About section
 - [ ] Add pricing table (1-bed / 2-bed / 3-bed estimates — Joe's dad to provide)
 - [x] Confirm Facebook + Instagram accounts are live
