@@ -11,7 +11,7 @@
 ## Needs Joe / Martin
 - [x] Connect domain (`witchards.co.uk`) on Spaceship → Vercel
 - [x] Set up Google Business Profile (needs verification)
-- [ ] Add owner name(s) to About section — asked Joe 2026-09-11 whether to use his name only or both his and his dad's (it's a father-and-son operation); awaiting reply on names + spelling
+- [x] Add owner name(s) to About section — Joe confirmed 2026-09-12: Bill and Joe Witchard
 - [x] Pricing table — not applicable, confirmed dynamic/quoted-by-call only (2026-09-11); site copy already reflects this correctly
 - [x] Confirm Facebook + Instagram accounts are live
 - [ ] **BLOCKED ON JOE** — Job/van photos: asked 2026-09-11 whether any exist yet and whether he wants real photos or is fine with stock for now. Open since May 2026 (see `client-correspondence/`). Awaiting reply — do not swap service-card stock images until he answers.

@@ -3,9 +3,8 @@
 ## Identity
 - **Business name:** Witchard House Clearance
 - **Tagline:** "Leave the fuss to us"
-- **Type:** Family-run — dad-and-son operation (two-man team). Joe Witchard
-  Brunel is the son/main contact; dad's name and preferred naming format
-  for the site (e.g. "Joe & [Dad]") asked 2026-09-11, awaiting reply.
+- **Type:** Family-run, dad-and-son operation (two-man team): Bill Witchard
+  (dad) and Joe Witchard (son, main contact). Confirmed by Joe 2026-09-12.
 - **Location:** Hampshire (based in/around Alresford and surroundings)
 
 ## Contact
