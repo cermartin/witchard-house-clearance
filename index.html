@@ -12,10 +12,13 @@
   <meta property="og:url" content="https://witchards.co.uk">
   <meta property="og:title" content="Witchard House Clearance | Hampshire House Clearance Specialists">
   <meta property="og:description" content="Family-run house clearance specialists in Alresford, Hampshire. Licensed waste carriers, CRB checked, fully insured. Free no-obligation quote.">
-  <meta property="og:image" content="https://witchards.co.uk/Snapchat-1699406977.jpg">
+  <meta property="og:image" content="https://witchards.co.uk/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Witchard House Clearance | Hampshire">
   <meta name="twitter:description" content="Family-run house clearance specialists in Hampshire. Licensed, insured, CRB checked. Free quote.">
+  <meta name="twitter:image" content="https://witchards.co.uk/assets/og-image.jpg">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
@@ -104,11 +107,11 @@
 
     /* ── HERO SPLASH ── */
     @keyframes logoEntrance {
-      from { opacity: 0; transform: scale(.88) translateY(18px); }
-      to   { opacity: 1; transform: scale(1)  translateY(0); }
+      from { opacity: 0; }
+      to   { opacity: 1; }
     }
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
+      from { opacity: 0; transform: translateY(6px); }
       to   { opacity: 1; transform: translateY(0); }
     }
     @keyframes chevronBob {
@@ -126,7 +129,7 @@
       text-align: center;
     }
     .hero-logo-wrap {
-      animation: logoEntrance .75s cubic-bezier(.22,1,.36,1) both;
+      animation: logoEntrance .5s ease-out both;
       margin-bottom: 2rem;
     }
     .hero-logo-wrap img {
@@ -460,7 +463,10 @@
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <img src="Snapchat-1699406977.jpg" alt="Witchard House Clearance" class="nav-logo-img">
+      <picture>
+        <source srcset="assets/logo-nav.webp" type="image/webp">
+        <img src="assets/logo-nav.jpg" alt="Witchard House Clearance" class="nav-logo-img">
+      </picture>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
@@ -486,7 +492,10 @@
 <!-- HERO SPLASH -->
 <section class="hero" id="home">
   <div class="hero-logo-wrap">
-    <img src="Snapchat-1699406977.jpg" alt="Witchard House Clearance — Family-Run Hampshire">
+    <picture>
+      <source srcset="assets/logo-hero.webp" type="image/webp">
+      <img src="assets/logo-hero.jpg" alt="Witchard House Clearance — Family-Run Hampshire">
+    </picture>
   </div>
   <p class="hero-tagline">Hampshire's trusted, family-run house clearance specialists</p>
   <div class="hero-btns">
@@ -635,15 +644,15 @@
     <h2 class="section-title">A Family Business Built on Trust</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
       <div>
-        <p style="font-size:1.05rem;color:#444;line-height:1.8;margin-bottom:1.2rem;">We're a family-run house clearance company based in New Alresford, Hampshire. We started Witchard because we saw how stressful property clearances could be — whether it's downsizing, dealing with a bereavement, or just clearing a lifetime of belongings.</p>
-        <p style="font-size:1.05rem;color:#444;line-height:1.8;margin-bottom:1.2rem;">We treat every property as if it were our own — with respect, efficiency, and a genuine care for the people we're helping. As a family team, we're hands-on at every job. You'll always deal with us directly, never a subcontractor.</p>
+        <p style="font-size:1.05rem;color:#444;line-height:1.8;margin-bottom:1.2rem;">We're a father-and-son team based in New Alresford, Hampshire. We started Witchard because we saw how stressful property clearances could be — whether it's downsizing, dealing with a bereavement, or just clearing a lifetime of belongings.</p>
+        <p style="font-size:1.05rem;color:#444;line-height:1.8;margin-bottom:1.2rem;">We treat every property as if it were our own — with respect, efficiency, and a genuine care for the people we're helping. It's just the two of us on every job, so you'll always deal with us directly, never a subcontractor.</p>
         <p style="font-size:1.05rem;color:#444;line-height:1.8;">We're fully licensed waste carriers, CRB checked, and carry full public liability insurance — so you can trust the job will be done properly and legally, every time.</p>
       </div>
       <div style="background:var(--surface);border-radius:16px;padding:2rem;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
           <div style="text-align:center;padding:1rem;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);">
-            <div style="font-size:2rem;font-weight:800;color:var(--primary);">100%</div>
-            <div style="font-size:.85rem;color:#666;margin-top:.25rem;">Family-run team</div>
+            <div style="font-size:2rem;font-weight:800;color:var(--primary);">2</div>
+            <div style="font-size:.85rem;color:#666;margin-top:.25rem;">Father &amp; son, every job</div>
           </div>
           <div style="text-align:center;padding:1rem;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);">
             <div style="font-size:2rem;font-weight:800;color:var(--primary);">Free</div>
