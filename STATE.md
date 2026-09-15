@@ -8,8 +8,8 @@ session closed out the two longest-open TODO items — photos and reviews
 
 1. **Photos unblocked.** Joe sent van/team photos and a job-in-progress
    photo (clearing garden rubble/wood into the van, can't use a skip).
-   Only the job photo was used: it directly matches Connor Walsh's review
-   (see below) and is now the Garden & Garage Clearance service card
+   Only the job photo was used: it directly matches the CW Garden
+   Construction review (see below) and is now the Garden & Garage Clearance service card
    image, replacing its stock Unsplash photo. Compressed to matching
    JPEG+WebP pairs in `assets/` (`job-garden-clearance.*`, ~65-90KB,
    same pattern as the existing logo assets). The other photos (van cab
@@ -21,16 +21,19 @@ session closed out the two longest-open TODO items — photos and reviews
 2. **Reviews unblocked.** Two real reviews added, replacing the 3
    placeholder Sarah T./James H./Linda M. entries: Sally Holmes (Facebook
    comment, a care home manager thanking Witchard for helping a resident
-   at Bailey House) and Connor Walsh of CW Garden Construction (Facebook
-   message, a trade contractor praising price/speed/cleanliness on a
-   skip-less rubble job — matches the new service card photo). Connor's
+   at Bailey House) and CW Garden Construction (Facebook message, a
+   trade contractor praising price/speed/cleanliness on a skip-less
+   rubble job — matches the new service card photo). The contractor's
    message had a typo ("defiantly" → "definitely") and was cut off
    mid-sentence in the screenshot Martin sent; typo corrected, quote
-   ended cleanly at the visible text, nothing invented. `#reviews`
-   section unhidden, "Reviews" added to nav. Removed the fabricated
-   "5.0/5" score line since it wasn't backed by a real count; added
-   `aggregateRating` schema (5.0, reviewCount: 2) since that's literally
-   what's on the page now.
+   ended cleanly at the visible text, nothing invented. Credited to the
+   company name only, not the individual's name (Connor Walsh) — he
+   asked to be posted under his company name, and Martin confirmed on
+   2026-09-15 to drop the personal name from display entirely, not just
+   lead with the company. `#reviews` section unhidden, "Reviews" added
+   to nav. Removed the fabricated "5.0/5" score line since it wasn't
+   backed by a real count; added `aggregateRating` schema (5.0,
+   reviewCount: 2) since that's literally what's on the page now.
 
 Both changes were confirmed with Martin before writing (team size /
 helper-vs-member status, and whether both testimonials should go live)
