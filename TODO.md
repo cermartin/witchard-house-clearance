@@ -30,6 +30,7 @@
 - [x] Service card photos — Garden & Garage card now uses a real job photo (see above)
 - [x] About section photo — stat-tile grid replaced with a real Bill + Joe photo (see above)
 - [x] Page felt too long (Martin's feedback 2026-09-15) — trimmed About from 3 paragraphs to 2, added a collapsible FAQ section (8 Q&As from Joe, `<details>/<summary>`, no JS needed) between How It Works and About to answer common questions without adding permanent scroll weight. FAQPage schema added alongside the existing LocalBusiness schema.
+- [x] Shortened all 6 service card descriptions (2026-09-15) — cut each to one tight sentence, no facts changed (oven cleaning exclusion, recycle/donate, no-charge-for-unneeded-work all kept).
 
 ## Done
 - [x] Real phone number (07706 559151)
