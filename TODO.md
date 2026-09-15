@@ -15,7 +15,7 @@
 - [x] Pricing table — not applicable, confirmed dynamic/quoted-by-call only (2026-09-11); site copy already reflects this correctly
 - [x] Confirm Facebook + Instagram accounts are live
 - [x] Job/van photos: Joe sent real photos 2026-09-15. Garden & Garage Clearance service card now uses a real job photo (clearing rubble into the van, matches the CW Garden Construction review below). About section now uses a real Bill + Joe photo (in the van together) in place of the generic stat-tile grid. Other 5 service-card images left as stock (only had one usable job-in-progress shot; the rest were van/team lifestyle photos not tied to a specific service).
-- [ ] **BLOCKED ON JOE** — Facebook link is wrong. Joe flagged 2026-09-15 that the Facebook button "takes me to a small company page" — current href (`facebook.com/groups/.../user/...`) is a link to a user's profile inside a Facebook group, not the actual Witchard Home Clearances Page. Need the real Page URL from Joe (appears in 3 places in `index.html`: schema `sameAs`, contact section Facebook link, footer social icon).
+- [x] Facebook link fixed 2026-09-15 — Martin supplied the real Page share link (`facebook.com/share/1EoQUbfVqw/`), confirmed it resolves to `facebook.com/people/Witchard-Home-Clearances/61590186251112/` (a genuine Page, not the old group/user link). Updated in all 3 places in `index.html` (schema `sameAs`, contact section, footer icon).
 
 ## When reviews come in
 - [x] Unhide reviews section + add real reviews — 2 real Facebook reviews added 2026-09-15 (Sally Holmes / Bailey House, CW Garden Construction — credited to company name only, not the individual, per his request). Placeholder Sarah T./James H./Linda M. reviews removed.
