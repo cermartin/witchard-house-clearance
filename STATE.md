@@ -4,20 +4,24 @@
 Site is live at witchards.co.uk (Vercel, auto-deploys from
 `github.com/cermartin/witchard-house-clearance` master on push). This
 session closed out the two longest-open TODO items — photos and reviews
-— using material Joe sent over Facebook/WhatsApp:
+— using material Joe sent over Facebook/WhatsApp, across two rounds:
 
 1. **Photos unblocked.** Joe sent van/team photos and a job-in-progress
    photo (clearing garden rubble/wood into the van, can't use a skip).
-   Only the job photo was used: it directly matches the CW Garden
-   Construction review (see below) and is now the Garden & Garage Clearance service card
-   image, replacing its stock Unsplash photo. Compressed to matching
-   JPEG+WebP pairs in `assets/` (`job-garden-clearance.*`, ~65-90KB,
-   same pattern as the existing logo assets). The other photos (van cab
-   selfies, 3 people in Witchard polos) were **not** used — About section
-   copy says "just the two of us on every job" (Bill + Joe), and the
-   third person is confirmed to be an occasional helper, not a team
-   member, so using a 3-person photo there would visually contradict that
-   claim. Left out entirely rather than risk overstating team size.
+   The job photo directly matches the CW Garden Construction review (see
+   below) and is now the Garden & Garage Clearance service card image,
+   replacing its stock Unsplash photo (`assets/job-garden-clearance.*`).
+   Of the remaining people photos, most show 3 people in Witchard polos —
+   confirmed the third person is an occasional helper, not a team
+   member, so those weren't used anywhere (would contradict the About
+   copy's "just the two of us on every job"). One photo is genuinely just
+   two people, Bill and Joe together in the van cab — confirmed with
+   Martin this is really them, not Bill + the helper — so that one now
+   replaces the generic 4-tile stat grid ("100% Family-run" etc.) in the
+   About section (`assets/bill-and-joe.*`, 4:5 crop, `object-position`
+   tuned to keep both faces in frame). Martin specifically suggested this
+   placement on a follow-up message. All new photo assets compressed to
+   matching JPEG+WebP pairs, same pattern as the existing logo assets.
 2. **Reviews unblocked.** Two real reviews added, replacing the 3
    placeholder Sarah T./James H./Linda M. entries: Sally Holmes (Facebook
    comment, a care home manager thanking Witchard for helping a resident
@@ -35,15 +39,23 @@ session closed out the two longest-open TODO items — photos and reviews
    backed by a real count; added `aggregateRating` schema (5.0,
    reviewCount: 2) since that's literally what's on the page now.
 
-Both changes were confirmed with Martin before writing (team size /
-helper-vs-member status, and whether both testimonials should go live)
-per the project's "don't assume business facts" rule. Reviewed locally
-with Playwright screenshots (desktop services grid, desktop + mobile
-reviews section) before commit.
+Every content decision (team size / helper-vs-member status, whether
+both testimonials should go live, and confirming the two-person photo
+was really Bill and Joe) was confirmed with Martin before writing, per
+the project's "don't assume business facts" rule. Reviewed locally with
+Playwright screenshots (desktop services grid, About section, desktop +
+mobile reviews section, About photo at both viewport sizes) before each
+commit. One CSS bug caught during testing: the About photo initially
+used `height:100%` on the `img` with no defined parent height, which
+rendered fine on the first load but broke (photo stretched to fill the
+whole viewport) — fixed by putting `aspect-ratio:4/5` directly on the
+`img` instead of relying on a percentage height from an unconstrained
+parent.
 
 ## What's done
 - `TODO.md` items closed: job/van photos, reviews unhidden, `aggregateRating`.
-- Local Python http.server used for the check has been shut down.
+- About section photo added as a follow-up in the same session.
+- Local Python http.server used for the checks has been shut down.
 
 ## Open / not done this session
 - 5 of 6 service cards still use stock Unsplash images (only had one
@@ -60,7 +72,8 @@ service type), swap the remaining 5 stock service-card images. Otherwise
 nothing blocking — next open item is Checkatrade/Trustpilot listing.
 
 ## Note on git history
-As of this session, `index.html` has uncommitted changes (reviews +
-service card photo + nav link + aggregateRating schema) plus two new
-untracked asset files (`assets/job-garden-clearance.jpg/webp`) — not yet
-committed or pushed. Push to `master` to deploy live via Vercel.
+As of this session, `index.html` has uncommitted changes (About section
+photo swap) plus two new untracked asset files
+(`assets/bill-and-joe.jpg/webp`) on top of the already-pushed reviews +
+service-card-photo + nav-link + aggregateRating commit. Push to `master`
+to deploy live via Vercel.
