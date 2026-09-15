@@ -272,6 +272,29 @@
     .review-author { font-weight: 600; font-size: .88rem; color: var(--primary); }
     .review-verified { font-size: .78rem; color: #888; margin-top: .2rem; }
 
+    /* ── FAQ ── */
+    #faq { background: #fff; }
+    .faq-list { max-width: 780px; }
+    .faq-item {
+      border-bottom: 1px solid #e5e2d8;
+    }
+    .faq-item:first-child { border-top: 1px solid #e5e2d8; }
+    .faq-item summary {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 1.15rem .25rem; cursor: pointer; list-style: none;
+      font-weight: 600; font-size: 1rem; color: var(--primary);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+"; flex-shrink: 0; font-size: 1.4rem; font-weight: 400;
+      color: var(--accent); transition: transform .2s;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p {
+      margin: 0 .25rem 1.15rem; font-size: .93rem; color: #555; line-height: 1.7;
+      max-width: 640px;
+    }
+
     /* ── AREAS ── */
     #areas { background: #fff; }
     .areas-chips { display: flex; flex-wrap: wrap; gap: .75rem; }
@@ -461,6 +484,54 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will you take items other companies won't, like mattresses, fridges, or paint tins?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, we take these as standard, including mattresses, fridges and freezers, paint tins, and tyres."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can you clear a property urgently, same day or next day?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, we can usually turn urgent jobs around within a day or two. Give us a call and we'll see what we can do."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be there while you clear the property?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No, you don't need to be there. As long as we can gain access and know what needs removing, we're happy to work around your schedule."}
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to everything you clear, does it go to waste?",
+      "acceptedAnswer": {"@type": "Answer", "text": "We upcycle and recycle as much as we can. Anything that can't be reused goes to licensed waste sites for proper processing."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can you collect just one item, like a sofa or fridge?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, we do single-item collections. We often group these with other jobs on the same day, which keeps the cost down for everyone."}
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance do I need to book?",
+      "acceptedAnswer": {"@type": "Answer", "text": "There's no set advance needed. We take jobs for the next day right through to bookings months or even a year ahead, whatever suits you."}
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any jobs you won't take on?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No, we take everything. As licensed waste carriers, we're able to handle the full range of house clearance work."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is the price you quote on the visit the final price?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, it's a fixed price once we've seen the job, with no hidden costs or surprises on the day."}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -475,6 +546,7 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#areas">Areas</a></li>
@@ -646,6 +718,49 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <span class="section-label">Common Questions</span>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Answers to what people usually ask before booking. Can't see yours? Just give us a call.</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Will you take items other companies won't, like mattresses, fridges, or paint tins?</summary>
+        <p>Yes, we take these as standard, including mattresses, fridges and freezers, paint tins, and tyres.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can you clear a property urgently, same day or next day?</summary>
+        <p>Yes, we can usually turn urgent jobs around within a day or two. Give us a call and we'll see what we can do.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to be there while you clear the property?</summary>
+        <p>No, you don't need to be there. As long as we can gain access and know what needs removing, we're happy to work around your schedule.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What happens to everything you clear, does it go to waste?</summary>
+        <p>We upcycle and recycle as much as we can. Anything that can't be reused goes to licensed waste sites for proper processing.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can you collect just one item, like a sofa or fridge?</summary>
+        <p>Yes, we do single-item collections. We often group these with other jobs on the same day, which keeps the cost down for everyone.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How far in advance do I need to book?</summary>
+        <p>There's no set advance needed. We take jobs for the next day right through to bookings months or even a year ahead, whatever suits you.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are there any jobs you won't take on?</summary>
+        <p>No, we take everything. As licensed waste carriers, we're able to handle the full range of house clearance work.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is the price you quote on the visit the final price?</summary>
+        <p>Yes, it's a fixed price once we've seen the job, with no hidden costs or surprises on the day.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT US -->
 <section id="about" style="background:#fff;">
   <div class="section-inner">
@@ -653,14 +768,13 @@
     <h2 class="section-title">A Family Business Built on Trust</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
       <div>
-        <p style="font-size:1.05rem;color:#444;line-height:1.8;margin-bottom:1.2rem;">We're Bill and Joe Witchard, a father-and-son team based in New Alresford, Hampshire. We started Witchard because we saw how stressful property clearances could be, whether it's downsizing, dealing with a bereavement, or just clearing a lifetime of belongings.</p>
-        <p style="font-size:1.05rem;color:#444;line-height:1.8;margin-bottom:1.2rem;">We treat every property as if it were our own, with respect, efficiency, and a genuine care for the people we're helping. It's just the two of us on every job, so you'll always deal with us directly, never a subcontractor.</p>
-        <p style="font-size:1.05rem;color:#444;line-height:1.8;">We're fully licensed waste carriers, CRB checked, and carry full public liability insurance, so you can trust the job will be done properly and legally, every time.</p>
+        <p style="font-size:1.05rem;color:#444;line-height:1.8;margin-bottom:1.2rem;">We're Bill and Joe Witchard, a father-and-son team based in New Alresford, Hampshire. It's just the two of us on every job, so you'll always deal with us directly, never a subcontractor.</p>
+        <p style="font-size:1.05rem;color:#444;line-height:1.8;">We're fully licensed waste carriers, CRB checked, and carry full public liability insurance, so the job gets done properly and legally, every time.</p>
       </div>
       <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(26,45,90,.15);">
         <picture>
           <source srcset="assets/bill-and-joe.webp" type="image/webp">
-          <img src="assets/bill-and-joe.jpg" alt="Bill and Joe Witchard, father and son, in the Witchard House Clearance van" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;display:block;">
+          <img src="assets/bill-and-joe.jpg" alt="Bill and Joe Witchard, father and son, in the Witchard House Clearance van" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;display:block;">
         </picture>
       </div>
     </div>
