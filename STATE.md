@@ -116,3 +116,12 @@ As of this session, `index.html` has uncommitted changes (FAQ section +
 schema, About trim, About photo aspect-ratio tweak) — not yet committed
 or pushed. Push to `master` to deploy live via Vercel. Still need to ask
 Joe for the correct Facebook Page URL before that item can close.
+
+## 2026-10-01 — Full House card photo + third review
+- Joe's van-loading photo (beds/mattresses/furniture) now on the Full House
+  Clearance card (`assets/job-house-clearance.*`), replacing stock. 4 cards
+  still stock: Partial, Post-Clearance Cleaning, Probate & Estate, Landlord & Rental.
+- Third review added (heatwave garden clearance, Facebook message). Reviewer
+  name unknown — credited as placeholder "Garden clearance customer" on
+  Martin's instruction; swap in the real name when known. Quote cut off in the
+  screenshot ("would highly…"), so ended at "Thanks Joe!". reviewCount → 3.
