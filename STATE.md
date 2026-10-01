@@ -122,6 +122,6 @@ Joe for the correct Facebook Page URL before that item can close.
   Clearance card (`assets/job-house-clearance.*`), replacing stock. 4 cards
   still stock: Partial, Post-Clearance Cleaning, Probate & Estate, Landlord & Rental.
 - Third review added (heatwave garden clearance, Facebook message). Reviewer
-  name unknown — credited as placeholder "Garden clearance customer" on
-  Martin's instruction; swap in the real name when known. Quote cut off in the
+  name unknown — was a placeholder at first on
+  Martin's instruction; real name Rowena Bournat added later same day. Quote cut off in the
   screenshot ("would highly…"), so ended at "Thanks Joe!". reviewCount → 3.
